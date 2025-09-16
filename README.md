@@ -32,4 +32,5 @@ operativi, quali Windows e MacOS.
 
 Per uniformità tra tutte le piattaforme, l'editor consigliato è [Visual Studio
 Code](https://code.visualstudio.com/). Si rimanda alla pagina indicata per
-l'installazione.
+l'installazione. Si raccomanda di disinstallare o disabilitare ogni estensione
+relativa a sistemi di intelligenza artificiale.
