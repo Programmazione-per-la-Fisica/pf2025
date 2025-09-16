@@ -4,11 +4,6 @@ Questa repository contiene materiale a supporto delle lezioni frontali
 dell'insegnamento di "Programmazione per la Fisica", corso di laurea in Fisica,
 Università di Bologna, Anno Accademico 2025/2026.
 
-In particolare nella directory `tex` c'e' il sorgente della presentazione
-utilizzata a lezione. Il corrispondente file in formato `pdf` viene
-automaticamente generato a ogni modifica e reso disponibile nella sezione
-**Releases**
-
 Il contenuto della repository è scaricabile sul proprio computer usando il
 comando `git`:
 
@@ -17,6 +12,18 @@ git clone https://github.com/programmazione-per-la-fisica/pf2025.git
 ```
 
 oppure scaricando direttamente un file `zip`.
+
+In particolare nella directory `tex` c'e' il sorgente della presentazione
+utilizzata a lezione. Il corrispondente file in formato `pdf` viene
+automaticamente generato a ogni modifica e reso disponibile nella sezione
+**Releases**. Per produrre la presentazione in locale:
+
+```shell
+cd tex
+make
+```
+
+Consultare il file [`Makefile`](tex/Makefile) per tutti i target disponibili.
 
 ## Piattaforma di riferimento
 
