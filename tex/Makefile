@@ -8,7 +8,7 @@ TRANS = "\PassOptionsToClass{trans}{beamer}\input{pf}"
 pf2025.pdf: $(TEXFILES)
 	rm -f contents.tex
 	echo '\input{introduzione.tex}' > contents.tex
-	# echo '\input{architecture.tex}' >> contents.tex
+	echo '\input{architecture.tex}' >> contents.tex
 	# echo '\input{basics.tex}' >> contents.tex
 	# echo '\input{flowcontrol.tex}' >> contents.tex
 	# echo '\input{functions.tex}' >> contents.tex
@@ -28,7 +28,7 @@ pf2025.pdf: $(TEXFILES)
 pf2025p.pdf: $(TEXFILES)
 	rm -f contents.tex
 	echo '\input{introduzione.tex}' > contents.tex
-	# echo '\input{architecture.tex}' >> contents.tex
+	echo '\input{architecture.tex}' >> contents.tex
 	# echo '\input{basics.tex}' >> contents.tex
 	# echo '\input{flowcontrol.tex}' >> contents.tex
 	# echo '\input{functions.tex}' >> contents.tex
@@ -51,11 +51,11 @@ introduzione.pdf: pf.tex introduzione.tex
 	$(LATEX) -jobname=introduzione $(TRANS)
 	rm contents.tex
 
-# architecture.pdf: pf.tex architecture.tex
-# 	echo '\input{architecture.tex}' > contents.tex
-# 	$(LATEX) -jobname=architecture $(TRANS)
-# 	$(LATEX) -jobname=architecture $(TRANS)
-# 	rm contents.tex
+architecture.pdf: pf.tex architecture.tex
+	echo '\input{architecture.tex}' > contents.tex
+	$(LATEX) -jobname=architecture $(TRANS)
+	$(LATEX) -jobname=architecture $(TRANS)
+	rm contents.tex
 
 # basics.pdf: pf.tex basics.tex
 # 	echo '\input{basics.tex}' > contents.tex
