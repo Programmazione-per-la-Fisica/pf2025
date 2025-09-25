@@ -9,7 +9,7 @@ pf2025.pdf: $(TEXFILES)
 	rm -f contents.tex
 	echo '\input{introduzione.tex}' > contents.tex
 	echo '\input{architecture.tex}' >> contents.tex
-	# echo '\input{basics.tex}' >> contents.tex
+	echo '\input{basics.tex}' >> contents.tex
 	# echo '\input{flowcontrol.tex}' >> contents.tex
 	# echo '\input{functions.tex}' >> contents.tex
 	# echo '\input{reference.tex}' >> contents.tex
@@ -29,7 +29,7 @@ pf2025p.pdf: $(TEXFILES)
 	rm -f contents.tex
 	echo '\input{introduzione.tex}' > contents.tex
 	echo '\input{architecture.tex}' >> contents.tex
-	# echo '\input{basics.tex}' >> contents.tex
+	echo '\input{basics.tex}' >> contents.tex
 	# echo '\input{flowcontrol.tex}' >> contents.tex
 	# echo '\input{functions.tex}' >> contents.tex
 	# echo '\input{reference.tex}' >> contents.tex
@@ -57,11 +57,11 @@ architecture.pdf: pf.tex architecture.tex
 	$(LATEX) -jobname=architecture $(TRANS)
 	rm contents.tex
 
-# basics.pdf: pf.tex basics.tex
-# 	echo '\input{basics.tex}' > contents.tex
-# 	$(LATEX) -jobname=basics $(TRANS)
-# 	$(LATEX) -jobname=basics $(TRANS)
-# 	rm contents.tex
+basics.pdf: pf.tex basics.tex
+	echo '\input{basics.tex}' > contents.tex
+	$(LATEX) -jobname=basics $(TRANS)
+	$(LATEX) -jobname=basics $(TRANS)
+	rm contents.tex
 
 # flowcontrol.pdf: pf.tex flowcontrol.tex
 # 	echo '\input{flowcontrol.tex}' > contents.tex
