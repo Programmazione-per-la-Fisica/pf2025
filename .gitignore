@@ -11,3 +11,4 @@ pf.*
 *.pdf
 a.out
 build
+.DS_Store
