@@ -11,7 +11,7 @@ pf2025.pdf: $(TEXFILES)
 	echo '\input{architecture.tex}' >> contents.tex
 	echo '\input{basics.tex}' >> contents.tex
 	echo '\input{flowcontrol.tex}' >> contents.tex
-	# echo '\input{functions.tex}' >> contents.tex
+	echo '\input{functions.tex}' >> contents.tex
 	# echo '\input{reference.tex}' >> contents.tex
 	# echo '\input{class.tex}' >> contents.tex
 	# echo '\input{templates.tex}' >> contents.tex
@@ -31,7 +31,7 @@ pf2025p.pdf: $(TEXFILES)
 	echo '\input{architecture.tex}' >> contents.tex
 	echo '\input{basics.tex}' >> contents.tex
 	echo '\input{flowcontrol.tex}' >> contents.tex
-	# echo '\input{functions.tex}' >> contents.tex
+	echo '\input{functions.tex}' >> contents.tex
 	# echo '\input{reference.tex}' >> contents.tex
 	# echo '\input{class.tex}' >> contents.tex
 	# echo '\input{templates.tex}' >> contents.tex
@@ -69,11 +69,11 @@ flowcontrol.pdf: pf.tex flowcontrol.tex
 	$(LATEX) -jobname=flowcontrol $(TRANS)
 	rm contents.tex
 
-# functions.pdf: pf.tex functions.tex
-# 	echo '\input{functions.tex}' > contents.tex
-# 	$(LATEX) -jobname=functions $(TRANS)
-# 	$(LATEX) -jobname=functions $(TRANS)
-# 	rm contents.tex
+functions.pdf: pf.tex functions.tex
+	echo '\input{functions.tex}' > contents.tex
+	$(LATEX) -jobname=functions $(TRANS)
+	$(LATEX) -jobname=functions $(TRANS)
+	rm contents.tex
 
 # reference.pdf: pf.tex reference.tex
 # 	echo '\input{reference.tex}' > contents.tex
