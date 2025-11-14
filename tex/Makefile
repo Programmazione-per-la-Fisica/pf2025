@@ -12,7 +12,7 @@ pf2025.pdf: $(TEXFILES)
 	echo '\input{basics.tex}' >> contents.tex
 	echo '\input{flowcontrol.tex}' >> contents.tex
 	echo '\input{functions.tex}' >> contents.tex
-	# echo '\input{reference.tex}' >> contents.tex
+	echo '\input{reference.tex}' >> contents.tex
 	# echo '\input{class.tex}' >> contents.tex
 	# echo '\input{templates.tex}' >> contents.tex
 	# echo '\input{stl.tex}' >> contents.tex
@@ -75,11 +75,11 @@ functions.pdf: pf.tex functions.tex
 	$(LATEX) -jobname=functions $(TRANS)
 	rm contents.tex
 
-# reference.pdf: pf.tex reference.tex
-# 	echo '\input{reference.tex}' > contents.tex
-# 	$(LATEX) -jobname=reference $(TRANS)
-# 	$(LATEX) -jobname=reference $(TRANS)
-# 	rm contents.tex
+reference.pdf: pf.tex reference.tex
+	echo '\input{reference.tex}' > contents.tex
+	$(LATEX) -jobname=reference $(TRANS)
+	$(LATEX) -jobname=reference $(TRANS)
+	rm contents.tex
 
 # class.pdf: pf.tex class.tex
 # 	echo '\input{class.tex}' > contents.tex
