@@ -530,11 +530,10 @@ Complex c3;           // meaning \{0., 0.\}\end{codeblock}
   \begin{codeblock}
 class Complex \{
   \ddd
-  Complex(double x) : r_\{x\}, i_\{\} \{\}
-  \ddd
+  Complex(double x);
 \};
 
-double norm2(Complex const& c) \{ \ddd \}
+double norm2(Complex const& c);
 
 norm2(1.);\uncover<2->{ // callable with a double (-> Complex)}
 \uncover<3->{norm2(1);  // callable with an int (-> double -> Complex)}
@@ -549,7 +548,7 @@ norm2(1.);\uncover<2->{ // callable with a double (-> Complex)}
   \begin{codeblock}<6->{
 class Complex \{
   \ddd
-  \alert{explicit} Complex(double x) \ddd
+  \alert{explicit} Complex(double x);
 \};
 
 norm2(1.);          // error
@@ -572,7 +571,7 @@ norm2(Complex\{1.\}); // ok}\end{codeblock}
       \begin{codeblock}
 class Complex \{
   \ddd
-  Complex(double x, double y) \ddd
+  Complex(double x, double y);
 \};
 
 Complex operator+(\ddd)
@@ -587,7 +586,7 @@ Complex operator+(\ddd)
       \begin{codeblock}
 class Complex \{
   \ddd
-  \alert{explicit} Complex(double x, double y) \ddd
+  \alert{explicit} Complex(double x, double y);
 \};
 
 Complex operator+(\ddd)
@@ -935,7 +934,7 @@ int main()
 \{
   try \{
     \ddd // actual program logic fully implemented here
-  \} catch (std::exception const& e) \{
+  \} catch (std::exception const& e) \{ // catches also std::runtime_error
     std::cerr << e.what() << \bslashn{};
     return EXIT_FAILURE;
   \} catch (...) \{
@@ -943,13 +942,14 @@ int main()
     return EXIT_FAILURE;
   \}
 \}\end{codeblock}
-  Note that \code{catch (...)} is actually a valid \Cpp{} syntax to catch exceptions of any type,
-  not a placeholder (the concept of derivation and the hierarchy of exceptions will be discussed
-  later)
-  \begin{itemize}
 
-    \item Exceptions should always be `\code{catch}'ed in the \code{main} function
-    \item You are \textbf{warmly encouraged} to adopt the above pattern in all your (non trivial) `\code{main}'s
+  \begin{itemize}
+  \item Note that \code{catch (...)} is actually a valid \Cpp{} syntax to catch
+    exceptions of any type, not a placeholder
+  \item The concept of derivation and the hierarchy of exceptions will be
+    discussed later
+  \item You are \textbf{warmly encouraged} to adopt the above pattern in all
+    your (non trivial) `\code{main}'s
 
   \end{itemize}
 \end{frame}
