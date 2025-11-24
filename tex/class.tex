@@ -660,6 +660,12 @@ struct Foo \{
 \uncover<4->{alfa.bar(); // inside bar, this is &alfa}
 \uncover<5->{beta.bar(); // inside bar, this is &beta}}\end{codeblock}
 
+  \begin{itemize}
+  \item Useful in some specific cases (see next slide)
+  \item Don't use it as the normal way to access class members (i.e. avoid
+    \code{this->member})
+  \end{itemize}
+
 \end{frame}
 
 \begin{frame}[fragile]{\code{operator@} in terms of \code{operator@=}}
