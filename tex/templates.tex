@@ -16,30 +16,30 @@
   \begin{column}{.5\textwidth}
     \begin{codeblock}<1->{
 class Complex \{
-  \alert{double} r;
-  \alert{double} i;
+  \alert{double} r_;
+  \alert{double} i_;
  public:
   Complex(
       \alert{double} x = \alert{double}\{\}
     , \alert{double} y = \alert{double}\{\}
-  ) : r\{x\}, i\{y\} \{\}
-  \alert{double} real() const \{ return r; \}
-  \alert{double} imag() const \{ return i; \}
+  ) : r_\{x\}, i_\{y\} \{\}
+  \alert{double} real() const \{ return r_; \}
+  \alert{double} imag() const \{ return i_; \}
 \};}\end{codeblock}
 
   \end{column}
   \begin{column}{.5\textwidth}
     \begin{codeblock}<2->{
 class Complex \{
-  \alert{float} r;
-  \alert{float} i;
+  \alert{float} r_;
+  \alert{float} i_;
  public:
   Complex(
       \alert{float} x = \alert{float}\{\}
     , \alert{float} y = \alert{float}\{\}
-  ) : r\{x\}, i\{y\} \{\}
-  \alert{float} real() const \{ return r; \}
-  \alert{float} imag() const \{ return i; \}
+  ) : r_\{x\}, i_\{y\} \{\}
+  \alert{float} real() const \{ return r_; \}
+  \alert{float} imag() const \{ return i_; \}
 \};}\end{codeblock}
 
   \end{column}
@@ -57,12 +57,12 @@ class Complex \{
 template<typename \alert{FP}> // or, template<class FP>
 class Complex \{
   \uncover<9->{static_assert(std::is_floating_point_v<FP>); // (*)}
-  \alert{FP} r;
-  \alert{FP} i;
+  \alert{FP} r_;
+  \alert{FP} i_;
  public:
-  Complex(\alert{FP} x = \alert{FP}\{\}, \alert{FP} y = \alert{FP}\{\}) : r\{x\}, i\{y\} \{\}
-  \alert{FP} real() const \{ return r; \}
-  \alert{FP} imag() const \{ return i; \}
+  Complex(\alert{FP} x = \alert{FP}\{\}, \alert{FP} y = \alert{FP}\{\}) : r_\{x\}, i_\{y\} \{\}
+  \alert{FP} real() const \{ return r_; \}
+  \alert{FP} imag() const \{ return i_; \}
 \};
 
 \uncover<2->{Complex c;                     // error}
