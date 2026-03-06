@@ -67,7 +67,7 @@ string s;\end{codeblock}
   \item It's good practice to put all entities of a software component into a namespace
 
     \begin{codeblock}
-namespace stats \{
+namespace pf \{
 
 struct Result \{ \ddd \};
 class Regression \{ \ddd \};
@@ -129,8 +129,8 @@ Result fit(Regression const&);
   \alert{Dynamic} container of elements of type \code{T}
   \begin{itemize}
   \item its size can vary at runtime
-  \item layout is contiguous in memory
-  \item container you should use by default
+  \item its layout is contiguous in memory
+  \item the container you should \textbf{use by default}
   \item<4-> be careful with initialization: \code{\{\}} vs \code{()}
     \begin{itemize}
     \item check if there is a constructor that takes an
