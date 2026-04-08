@@ -16,7 +16,7 @@ pf2025.pdf: $(TEXFILES)
 	echo '\input{class.tex}' >> contents.tex
 	echo '\input{templates.tex}' >> contents.tex
 	echo '\input{stl.tex}' >> contents.tex
-	# echo '\input{compilation.tex}' >> contents.tex
+	echo '\input{compilation.tex}' >> contents.tex
 	# echo '\input{static.tex}' >> contents.tex
 	# echo '\input{memory_management.tex}' >> contents.tex
 	# echo '\input{polymorphism.tex}' >> contents.tex
@@ -36,7 +36,7 @@ pf2025p.pdf: $(TEXFILES)
 	echo '\input{class.tex}' >> contents.tex
 	echo '\input{templates.tex}' >> contents.tex
 	echo '\input{stl.tex}' >> contents.tex
-	# echo '\input{compilation.tex}' >> contents.tex
+	echo '\input{compilation.tex}' >> contents.tex
 	# echo '\input{static.tex}' >> contents.tex
 	# echo '\input{memory_management.tex}' >> contents.tex
 	# echo '\input{polymorphism.tex}' >> contents.tex
@@ -99,11 +99,11 @@ stl.pdf: pf.tex stl.tex
 	$(LATEX) -jobname=stl $(TRANS)
 	rm contents.tex
 
-# compilation.pdf: pf.tex compilation.tex
-# 	echo '\input{compilation.tex}' > contents.tex
-# 	$(LATEX) -jobname=compilation $(TRANS)
-# 	$(LATEX) -jobname=compilation $(TRANS)
-# 	rm contents.tex
+compilation.pdf: pf.tex compilation.tex
+	echo '\input{compilation.tex}' > contents.tex
+	$(LATEX) -jobname=compilation $(TRANS)
+	$(LATEX) -jobname=compilation $(TRANS)
+	rm contents.tex
 
 # memory_management.pdf: pf.tex memory_management.tex
 # 	echo '\input{memory_management.tex}' > contents.tex
