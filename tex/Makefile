@@ -17,8 +17,8 @@ pf2025.pdf: $(TEXFILES)
 	echo '\input{templates.tex}' >> contents.tex
 	echo '\input{stl.tex}' >> contents.tex
 	echo '\input{compilation.tex}' >> contents.tex
-	# echo '\input{static.tex}' >> contents.tex
-	# echo '\input{memory_management.tex}' >> contents.tex
+	echo '\input{static.tex}' >> contents.tex
+	echo '\input{memory_management.tex}' >> contents.tex
 	# echo '\input{polymorphism.tex}' >> contents.tex
 	# echo '\input{epilog.tex}' >> contents.tex
 	$(LATEX) -jobname=pf2025 pf
@@ -37,8 +37,8 @@ pf2025p.pdf: $(TEXFILES)
 	echo '\input{templates.tex}' >> contents.tex
 	echo '\input{stl.tex}' >> contents.tex
 	echo '\input{compilation.tex}' >> contents.tex
-	# echo '\input{static.tex}' >> contents.tex
-	# echo '\input{memory_management.tex}' >> contents.tex
+	echo '\input{static.tex}' >> contents.tex
+	echo '\input{memory_management.tex}' >> contents.tex
 	# echo '\input{polymorphism.tex}' >> contents.tex
 	# echo '\input{epilog.tex}' >> contents.tex
 	$(LATEX) -jobname=pf2025p $(TRANS)
@@ -105,17 +105,17 @@ compilation.pdf: pf.tex compilation.tex
 	$(LATEX) -jobname=compilation $(TRANS)
 	rm contents.tex
 
-# memory_management.pdf: pf.tex memory_management.tex
-# 	echo '\input{memory_management.tex}' > contents.tex
-# 	$(LATEX) -jobname=memory_management $(TRANS)
-# 	$(LATEX) -jobname=memory_management $(TRANS)
-# 	rm contents.tex
+static.pdf: pf.tex static.tex
+	echo '\input{static.tex}' > contents.tex
+	$(LATEX) -jobname=static $(TRANS)
+	$(LATEX) -jobname=static $(TRANS)
+	rm contents.tex
 
-# static.pdf: pf.tex static.tex
-# 	echo '\input{static.tex}' > contents.tex
-# 	$(LATEX) -jobname=static $(TRANS)
-# 	$(LATEX) -jobname=static $(TRANS)
-# 	rm contents.tex
+memory_management.pdf: pf.tex memory_management.tex
+	echo '\input{memory_management.tex}' > contents.tex
+	$(LATEX) -jobname=memory_management $(TRANS)
+	$(LATEX) -jobname=memory_management $(TRANS)
+	rm contents.tex
 
 # polymorphism.pdf: pf.tex polymorphism.tex
 # 	echo '\input{polymorphism.tex}' > contents.tex
