@@ -19,7 +19,7 @@ pf2025.pdf: $(TEXFILES)
 	echo '\input{compilation.tex}' >> contents.tex
 	echo '\input{static.tex}' >> contents.tex
 	echo '\input{memory_management.tex}' >> contents.tex
-	# echo '\input{polymorphism.tex}' >> contents.tex
+	echo '\input{polymorphism.tex}' >> contents.tex
 	# echo '\input{epilog.tex}' >> contents.tex
 	$(LATEX) -jobname=pf2025 pf
 	$(LATEX) -jobname=pf2025 pf
@@ -39,7 +39,7 @@ pf2025p.pdf: $(TEXFILES)
 	echo '\input{compilation.tex}' >> contents.tex
 	echo '\input{static.tex}' >> contents.tex
 	echo '\input{memory_management.tex}' >> contents.tex
-	# echo '\input{polymorphism.tex}' >> contents.tex
+	echo '\input{polymorphism.tex}' >> contents.tex
 	# echo '\input{epilog.tex}' >> contents.tex
 	$(LATEX) -jobname=pf2025p $(TRANS)
 	$(LATEX) -jobname=pf2025p $(TRANS)
@@ -117,11 +117,11 @@ memory_management.pdf: pf.tex memory_management.tex
 	$(LATEX) -jobname=memory_management $(TRANS)
 	rm contents.tex
 
-# polymorphism.pdf: pf.tex polymorphism.tex
-# 	echo '\input{polymorphism.tex}' > contents.tex
-# 	$(LATEX) -jobname=polymorphism $(TRANS)
-# 	$(LATEX) -jobname=polymorphism $(TRANS)
-# 	rm contents.tex
+polymorphism.pdf: pf.tex polymorphism.tex
+	echo '\input{polymorphism.tex}' > contents.tex
+	$(LATEX) -jobname=polymorphism $(TRANS)
+	$(LATEX) -jobname=polymorphism $(TRANS)
+	rm contents.tex
 
 # epilog.pdf: pf.tex epilog.tex
 # 	echo '\input{epilog.tex}' > contents.tex
