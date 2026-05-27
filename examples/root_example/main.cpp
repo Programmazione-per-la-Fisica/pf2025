@@ -118,8 +118,6 @@ int main() {
     std::filesystem::remove(file_name);
   }
 
-  file_name += "+"; // + necessario per creare gif animate
-  
   TCanvas canvas{"c1", "hit-or-miss example", 500, 500};
   canvas.SetGrid();
 
@@ -154,7 +152,7 @@ int main() {
     canvas.Modified();
     canvas.Update();
 
-    canvas.Print(file_name.c_str());
+    canvas.Print(
+        (file_name + "+").c_str());  // il + è necessario per creare gif animate
   }
-
 }

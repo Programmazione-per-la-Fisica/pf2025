@@ -1,6 +1,6 @@
 # Esempio di polimorfismo dinamico con SFML
 
-Il codice in questa cartella ([`main.cpp`](./main.cpp) mostra un caso d'uso per
+Il codice in questa cartella ([`main.cpp`](./main.cpp)) mostra un caso d'uso per
 il polimorfismo dinamico applicato alla manipolazione di figure geometriche sul
 piano.
 
@@ -21,7 +21,7 @@ while (window.isOpen()) {
 ```
 
 il corpo del `while` gestisce un singolo _frame_ temporale.
-Nel caso specifico, il _*_frame rate_ viene impostato a 60 frame al secondo
+Nel caso specifico, il _frame rate_ viene impostato a 60 frame al secondo
 (_frames per second_, FPS), ognuno dei quali permane per circa 15 millisecondi.
 
 All'interno del _game loop_ si evidenziano cinque fasi significative:
@@ -38,7 +38,7 @@ All'interno del _game loop_ si evidenziano cinque fasi significative:
 Il codice usa `CMake`, `ninja` e la libreria grafica `SFML`, installabili su
 Ubuntu tramite il comando `sudo apt install cmake ninja libsfml-dev`.
 
-Per compilare il codice:
+Per compilare il codice utilizzate il comando:
 
 ```bash
 cmake -S . -B build -G "Ninja Multi-Config"
