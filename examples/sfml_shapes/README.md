@@ -1,6 +1,6 @@
 # Esempio di polimorfismo dinamico con SFML
 
-Il codice in questa cartella ([`main.cpp`](./main.cpp)) mostra un caso d'uso per
+`Il codice in questa cartella ([`main.cpp`](./main.cpp)) mostra un caso d'uso per
 il polimorfismo dinamico applicato alla manipolazione di figure geometriche sul
 piano.
 
