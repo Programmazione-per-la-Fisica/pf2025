@@ -91,7 +91,7 @@ class PiTexHandler {
     format(n_tex_, alignment::BottomLeft);
   }
 
-  double pi() { return 4.0 * n_in_ / n_total_; }
+  double pi() const { return 4.0 * n_in_ / n_total_; }
 
   void draw() {  // non-const, TLatex::Draw() e pi_tex_.SetText() non lo sono
     auto draw_tex = [](TLatex& tex, double x, double y,
